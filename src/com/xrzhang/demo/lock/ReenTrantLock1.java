@@ -37,6 +37,15 @@ public class ReenTrantLock1 extends Thread {
         Thread t2 = new Thread(reenTrantLock1);
         t2.start();
 
+        ReentrantLock rtLock = new ReentrantLock();
+
+        rtLock.lock();
+
+        try {
+
+        } finally {
+            rtLock.unlock();
+        }
 
     }
 }
